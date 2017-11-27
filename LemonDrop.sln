@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.Website.Mvc", "src\LemonDrop.Website.Mvc\LemonDrop.Website.Mvc.csproj", "{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DDCD80EB-1AC5-4EF2-B981-186E39D756F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D3B4795-76F1-4E03-99CA-B686D9FAF5AD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{47B1E67B-A166-45C0-B0AB-CB88A811160E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.AcceptanceTests", "test\LemonDrop.AcceptanceTests\LemonDrop.AcceptanceTests.csproj", "{85989BFD-B952-447D-BC85-18B8CE9DD047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.UnitTests", "test\LemonDrop.UnitTests\LemonDrop.UnitTests.csproj", "{FF75F5A7-2CEB-414A-A132-CD667098D14C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.AcceptanceTests.Common", "test\LemonDrop.AcceptanceTests.Common\LemonDrop.AcceptanceTests.Common.csproj", "{E05546B4-E9C3-4202-BBC4-CA3164C76190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.WebTests.Selenium", "test\LemonDrop.WebTests.Selenium\LemonDrop.WebTests.Selenium.csproj", "{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85989BFD-B952-447D-BC85-18B8CE9DD047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85989BFD-B952-447D-BC85-18B8CE9DD047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85989BFD-B952-447D-BC85-18B8CE9DD047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85989BFD-B952-447D-BC85-18B8CE9DD047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05546B4-E9C3-4202-BBC4-CA3164C76190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05546B4-E9C3-4202-BBC4-CA3164C76190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05546B4-E9C3-4202-BBC4-CA3164C76190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05546B4-E9C3-4202-BBC4-CA3164C76190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5} = {DDCD80EB-1AC5-4EF2-B981-186E39D756F7}
+		{85989BFD-B952-447D-BC85-18B8CE9DD047} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
+		{E05546B4-E9C3-4202-BBC4-CA3164C76190} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
+		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B76CCC1-B166-4FBC-8B2F-87311381F757}
+	EndGlobalSection
+EndGlobal
