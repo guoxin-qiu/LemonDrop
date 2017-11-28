@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.Website.Mvc", "src\LemonDrop.Website.Mvc\LemonDrop.Website.Mvc.csproj", "{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Source", "1.Source", "{DDCD80EB-1AC5-4EF2-B981-186E39D756F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DDCD80EB-1AC5-4EF2-B981-186E39D756F7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{9D3B4795-76F1-4E03-99CA-B686D9FAF5AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D3B4795-76F1-4E03-99CA-B686D9FAF5AD}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Acceptance Tests", "3.Acceptance Tests", "{47B1E67B-A166-45C0-B0AB-CB88A811160E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{47B1E67B-A166-45C0-B0AB-CB88A811160E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.AcceptanceTests", "test\LemonDrop.AcceptanceTests\LemonDrop.AcceptanceTests.csproj", "{85989BFD-B952-447D-BC85-18B8CE9DD047}"
 EndProject
@@ -22,8 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.AcceptanceTests.Common", "test\LemonDrop.AcceptanceTests.Common\LemonDrop.AcceptanceTests.Common.csproj", "{E05546B4-E9C3-4202-BBC4-CA3164C76190}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDrop.WebTests.Selenium", "test\LemonDrop.WebTests.Selenium\LemonDrop.WebTests.Selenium.csproj", "{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.UnitTest", "2.UnitTest", "{7B8B589D-C16B-40F7-8D14-D8E5E1FFF352}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,7 +56,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CBB24F3C-2700-452E-9AD2-5FCE4D59D2E5} = {DDCD80EB-1AC5-4EF2-B981-186E39D756F7}
 		{85989BFD-B952-447D-BC85-18B8CE9DD047} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
-		{FF75F5A7-2CEB-414A-A132-CD667098D14C} = {7B8B589D-C16B-40F7-8D14-D8E5E1FFF352}
+		{FF75F5A7-2CEB-414A-A132-CD667098D14C} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
 		{E05546B4-E9C3-4202-BBC4-CA3164C76190} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
 		{E8E868DE-EFAC-4ECC-A9E5-1A3ABA705C49} = {47B1E67B-A166-45C0-B0AB-CB88A811160E}
 	EndGlobalSection
