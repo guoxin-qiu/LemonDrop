@@ -47,8 +47,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US04 - Book details", "\tAs a potential customer\r\n\tI want to see the details of a book\r\n\tSo that I can be" +
                     "tter decide to buy it.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore",
-                        "web"});
+                        "BookStore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -88,7 +87,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         
         public virtual void FeatureBackground()
         {
-#line 9
+#line 8
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Author",
@@ -110,7 +109,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
                         "Gojko Adzic",
                         "Bridging the Communication Gap",
                         "24.75"});
-#line 10
+#line 9
  testRunner.Given("the following books", ((string)(null)), table1, "Given ");
 #line hidden
         }
@@ -120,15 +119,14 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US04 - Book details")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void TheAuthorTheTitleAndThePriceOfABookCanBeSeen()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The author, the title and the price of a book can be seen", ((string[])(null)));
-#line 17
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 8
 this.FeatureBackground();
-#line 18
+#line 17
  testRunner.When("I open the details of \'Analysis Patterns\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -139,7 +137,7 @@ this.FeatureBackground();
                         "Martin Fowler",
                         "Analysis Patterns",
                         "50.20"});
-#line 19
+#line 18
  testRunner.Then("the book details should show", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();

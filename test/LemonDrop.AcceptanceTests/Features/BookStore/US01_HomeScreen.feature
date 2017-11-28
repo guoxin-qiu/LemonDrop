@@ -15,7 +15,7 @@ Background:
 		|Gojko Adzic	|Bridging the Communication Gap		|24.75	|
 
 Scenario: Cheapest 3 books should be listed on the home screen
-	When I enter the shop
+	When I enter the bookstore
 	Then the home screen should show the following books
 		|Title								|
 		|Bridging the Communication Gap		|

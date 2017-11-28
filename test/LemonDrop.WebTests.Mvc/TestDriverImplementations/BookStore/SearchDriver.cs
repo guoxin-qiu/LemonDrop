@@ -1,15 +1,16 @@
-﻿using LemonDrop.AcceptanceTests.Common;
-using LemonDrop.AcceptanceTests.Support;
+﻿using LemonDrop.AcceptanceTests.Common.Support;
+using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
+using LemonDrop.WebTests.Mvc.Support;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.AcceptanceTests.Drivers.BookStore
+namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
 {
-    public class SearchDriver
+    public class SearchDriver : ISearchDriver
     {
         private SearchResultState _state;
 

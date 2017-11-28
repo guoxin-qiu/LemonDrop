@@ -1,6 +1,5 @@
 ﻿@automated
 @BookStore
-@web
 Feature: US04 - Book details
 	As a potential customer
 	I want to see the details of a book

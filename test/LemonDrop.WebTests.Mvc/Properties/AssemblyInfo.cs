@@ -1,18 +1,16 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("LemonDrop.MvcTests")]
+[assembly: AssemblyTitle("LemonDrop.WebTests.Mvc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SYDQ")]
-[assembly: AssemblyProduct("LemonDrop.MvcTests")]
+[assembly: AssemblyProduct("LemonDrop.WebTests.Mvc")]
 [assembly: AssemblyCopyright("Copyright © SYDQ 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: ComVisible(false)]
-
-[assembly: Guid("e2800e78-3d16-465a-bd39-af28b7122dec")]
+[assembly: Guid("4181792c-9c68-4219-86cf-c5015efca464")]
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

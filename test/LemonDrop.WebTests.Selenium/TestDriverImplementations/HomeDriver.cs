@@ -1,23 +1,21 @@
-﻿using LemonDrop.AcceptanceTests.Common;
+﻿using LemonDrop.AcceptanceTests.Common.Support;
+using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Models;
 using LemonDrop.WebTests.Selenium.Support;
 using OpenQA.Selenium;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.BookStore
+namespace LemonDrop.WebTests.Selenium.TestDriverImplementations
 {
-    [Binding, Scope(Tag = "web")]
-    public class HomeSteps : SeleniumStepsBase
+    public class HomeDriver : DriverBase, IHomeDriver
     {
-        [When(@"I enter the shop")]
-        public void WhenIEnterTheShop()
+        public void Navigate()
         {
             selenium.NavigateTo("BookStore/Index");
         }
 
-        [Then(@"the home screen should show the following books")]
-        public void ThenTheHomeScreenShouldShowTheFollowingBooks(Table expectedBooks)
+        public void ShowsBooks(Table expectedBooks)
         {
             var expectedTitles = expectedBooks.Rows.Select(t => t["Title"]);
             var foundBooks = from row in selenium.FindElements(By.XPath("//table/tbody/tr"))

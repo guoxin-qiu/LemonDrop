@@ -3,7 +3,7 @@ using LemonDrop.Website.Mvc.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LemonDrop.AcceptanceTests.Common
+namespace LemonDrop.AcceptanceTests.Common.Support
 {
     public class BookAssertions
     {

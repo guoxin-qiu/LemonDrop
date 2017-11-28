@@ -38,9 +38,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -59,12 +56,6 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Moq, Version=4.7.145.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moq.4.7.145\lib\net45\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -76,24 +67,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
@@ -107,10 +80,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drivers\BookStore\BookDetailsDriver.cs" />
-    <Compile Include="Drivers\BookStore\HomeDriver.cs" />
-    <Compile Include="Drivers\BookStore\SearchDriver.cs" />
-    <Compile Include="Drivers\BookStore\ShoppingCartDriver.cs" />
     <Compile Include="Features\BookStore\US01_HomeScreen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,11 +111,6 @@
     <Compile Include="StepDefinitions\CalculatorSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\ShoppingCartSteps.cs" />
-    <Compile Include="Support\ActionResultExtensions.cs" />
-    <Compile Include="Support\BookStore\CatalogContext.cs" />
-    <Compile Include="Support\BookStore\ReferenceBookList.cs" />
-    <Compile Include="Support\DatabaseTools.cs" />
-    <Compile Include="Support\HttpContextStub.cs" />
     <Compile Include="Support\InjectManage.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,13 +150,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\LemonDrop.Website.Mvc\LemonDrop.Website.Mvc.csproj">
-      <Project>{cbb24f3c-2700-452e-9ad2-5fce4d59d2e5}</Project>
-      <Name>LemonDrop.Website.Mvc</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LemonDrop.AcceptanceTests.Common\LemonDrop.AcceptanceTests.Common.csproj">
       <Project>{e05546b4-e9c3-4202-bbc4-ca3164c76190}</Project>
       <Name>LemonDrop.AcceptanceTests.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LemonDrop.WebTests.Mvc\LemonDrop.WebTests.Mvc.csproj">
+      <Project>{4181792c-9c68-4219-86cf-c5015efca464}</Project>
+      <Name>LemonDrop.WebTests.Mvc</Name>
     </ProjectReference>
     <ProjectReference Include="..\LemonDrop.WebTests.Selenium\LemonDrop.WebTests.Selenium.csproj">
       <Project>{e8e868de-efac-4ecc-a9e5-1a3aba705c49}</Project>

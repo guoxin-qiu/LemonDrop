@@ -1,5 +1,4 @@
-﻿using LemonDrop.AcceptanceTests.Drivers.BookStore;
-using System;
+﻿using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using TechTalk.SpecFlow;
 
 namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
@@ -7,16 +6,23 @@ namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
     [Binding]
     public class ShoppingCartSteps
     {
-        private readonly ShoppingCartDriver _driver;
+        private readonly IShoppingCartDriver _driver;
 
-        public ShoppingCartSteps(ShoppingCartDriver driver)
+        public ShoppingCartSteps(IShoppingCartDriver driver)
         {
             _driver = driver;
         }
+
         [Given(@"I have a shopping cart with: '(.*)'")]
         public void GivenIHaveAShoppingCartWith(string bookIds)
         {
             _driver.SetShoppingCart(bookIds);
+        }
+
+        [When(@"I enter the shop")]
+        public void WhenIEnterTheShop()
+        {
+            //
         }
 
         [When(@"I place '(.*)' into the shopping cart")]

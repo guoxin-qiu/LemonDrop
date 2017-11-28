@@ -4,15 +4,15 @@ using System.Web;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.AcceptanceTests.Support
+namespace LemonDrop.WebTests.Mvc.Support
 {
     [Binding]
-    public class HttpContextStub
+    public static class HttpContextStub
     {
         private static StubSession SessionStub;
 
         [BeforeScenario]
-        public void CleanReferenceBooks()
+        public static void CleanReferenceBooks()
         {
             SessionStub = null;
         }

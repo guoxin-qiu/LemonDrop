@@ -2,7 +2,7 @@
 using FluentAssertions;
 using LemonDrop.Website.Mvc.Models;
 
-namespace LemonDrop.AcceptanceTests.Support.BookStore
+namespace LemonDrop.WebTests.Mvc.Support.BookStore
 {
     public class ReferenceBookList : Dictionary<string, Book>
     {

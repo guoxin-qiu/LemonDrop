@@ -1,5 +1,4 @@
-﻿using LemonDrop.AcceptanceTests.Drivers.BookStore;
-using System;
+﻿using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using TechTalk.SpecFlow;
 
 namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
@@ -7,9 +6,9 @@ namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
     [Binding]
     public class BookSearchSteps
     {
-        private readonly SearchDriver _searchDriver;
+        private readonly ISearchDriver _searchDriver;
 
-        public BookSearchSteps(SearchDriver searchDriver)
+        public BookSearchSteps(ISearchDriver searchDriver)
         {
             _searchDriver = searchDriver;
         }

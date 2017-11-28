@@ -1,18 +1,19 @@
 ﻿using FluentAssertions;
-using LemonDrop.AcceptanceTests.Support;
-using LemonDrop.AcceptanceTests.Support.BookStore;
+using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
+using LemonDrop.WebTests.Mvc.Support;
+using LemonDrop.WebTests.Mvc.Support.BookStore;
 using System;
 using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.AcceptanceTests.Drivers.BookStore
+namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
 {
-    public class BookDetailsDriver
+    public class BookDetailsDriver : IBookDetailsDriver
     {
-        private const decimal BookDefaultPrice = 10;
+        private const decimal BookDefaultPrice = 10; // need to config
         private readonly CatalogContext _context;
         private ActionResult _result;
 
@@ -23,29 +24,11 @@ namespace LemonDrop.AcceptanceTests.Drivers.BookStore
 
         public void AddToWarehouse(Table books)
         {
-            // TODO: books.CreateSet<Book>();
+            var booksFromDb = DatabaseTools.AddBooksToDb(books);
 
-            using (var context = new BookStoreContext())
+            foreach (var book in booksFromDb)
             {
-                foreach (var row in books.Rows)
-                {
-                    var book = new Book
-                    {
-                        Author = row["Author"],
-                        Title = row["Title"],
-                        Price = books.Header.Contains("Price")
-                            ? Convert.ToDecimal(row["Price"])
-                            : BookDefaultPrice
-                    };
-
-                    _context.ReferenceBooks.Add(
-                        books.Header.Contains("Id") ? row["Id"] : book.Title,
-                        book);
-
-                    context.Books.Add(book);
-                }
-
-                context.SaveChanges();
+                _context.ReferenceBooks.Add(book.Title, book);
             }
         }
 

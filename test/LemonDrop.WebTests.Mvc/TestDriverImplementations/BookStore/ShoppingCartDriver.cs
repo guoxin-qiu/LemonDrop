@@ -1,14 +1,15 @@
 ﻿using FluentAssertions;
-using LemonDrop.AcceptanceTests.Support;
-using LemonDrop.AcceptanceTests.Support.BookStore;
+using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
+using LemonDrop.WebTests.Mvc.Support;
+using LemonDrop.WebTests.Mvc.Support.BookStore;
 using System;
 using System.Linq;
 
-namespace LemonDrop.AcceptanceTests.Drivers.BookStore
+namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
 {
-    public class ShoppingCartDriver
+    public class ShoppingCartDriver : IShoppingCartDriver
     {
         private readonly CatalogContext _catalogContext;
 

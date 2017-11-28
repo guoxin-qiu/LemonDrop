@@ -1,5 +1,6 @@
 ﻿using BoDi;
-using System;
+using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
+using LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore;
 using TechTalk.SpecFlow;
 
 namespace LemonDrop.AcceptanceTests.Support
@@ -15,9 +16,24 @@ namespace LemonDrop.AcceptanceTests.Support
         }
 
         [BeforeScenario]
-        public void InitializeClock()
+        public void InitializeTypes()
         {
-            //_objectContainer.RegisterTypeAs<SystemClock, IClock>();
+            InitializeTypes_Mvc();
+            InitializeTypes_Selenium();
+        }
+
+        private void InitializeTypes_Mvc()
+        {
+            _objectContainer.RegisterTypeAs<HomeDriver, IHomeDriver>();
+            _objectContainer.RegisterTypeAs<SearchDriver, ISearchDriver>();
+            _objectContainer.RegisterTypeAs<BookDetailsDriver, IBookDetailsDriver>();
+            _objectContainer.RegisterTypeAs<ShoppingCartDriver, IShoppingCartDriver>();
+        }
+
+        private void InitializeTypes_Selenium()
+        {
+            _objectContainer.RegisterTypeAs<WebTests.Selenium.TestDriverImplementations.HomeDriver, IHomeDriver>();
+            _objectContainer.RegisterTypeAs<WebTests.Selenium.TestDriverImplementations.SearchDriver, ISearchDriver>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using LemonDrop.AcceptanceTests.Drivers.BookStore;
+﻿using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using TechTalk.SpecFlow;
 
 namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
@@ -6,9 +6,9 @@ namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
     [Binding]
     public class BookSteps
     {
-        private readonly BookDetailsDriver _driver;
+        private readonly IBookDetailsDriver _driver;
 
-        public BookSteps(BookDetailsDriver driver)
+        public BookSteps(IBookDetailsDriver driver)
         {
             _driver = driver;
         }
