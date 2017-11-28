@@ -147,6 +147,7 @@
     <Compile Include="Support\BookStore\ReferenceBookList.cs" />
     <Compile Include="Support\DatabaseTools.cs" />
     <Compile Include="Support\HttpContextStub.cs" />
+    <Compile Include="Support\InjectManage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
