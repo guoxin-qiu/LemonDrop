@@ -13,6 +13,7 @@ namespace LemonDrop.AcceptanceTests.Drivers.BookStore
 {
     public class HomeDriver
     {
+        private const decimal BookDefaultPrice = 10;
         private readonly CatalogContext _context;
         private ActionResult _result;
 
@@ -22,7 +23,7 @@ namespace LemonDrop.AcceptanceTests.Drivers.BookStore
         {
             // TODO: books.CreateSet<Book>();
 
-            using(var db = new BookStoreContext())
+            using (var db = new BookStoreContext())
             {
                 foreach (var row in books.Rows)
                 {
@@ -30,7 +31,7 @@ namespace LemonDrop.AcceptanceTests.Drivers.BookStore
                     {
                         Author = row["Author"],
                         Title = row["Title"],
-                        Price = Convert.ToDecimal(row["Price"])
+                        Price = books.Header.Contains("Price") ? Convert.ToDecimal(row["Price"]) : BookDefaultPrice
                     };
                     _context.ReferenceBooks.Add(book.Title, book);
                     db.Books.Add(book);
@@ -42,7 +43,7 @@ namespace LemonDrop.AcceptanceTests.Drivers.BookStore
 
         public void Navigate()
         {
-            using(var controller = new BookStoreController())
+            using (var controller = new BookStoreController())
             {
                 _result = controller.Index();
             }

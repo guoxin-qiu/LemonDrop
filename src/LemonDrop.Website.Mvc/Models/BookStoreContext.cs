@@ -7,7 +7,7 @@ namespace LemonDrop.Website.Mvc.Models
         public BookStoreContext()
             :base("name=BookStoreContext")
         {
-
+            Database.SetInitializer<BookStoreContext>(null);
         }
 
         public DbSet<Book> Books { get; set; }
