@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="BookStore\BookSearchSteps.cs" />
     <Compile Include="BookStore\HomeSteps.cs" />
+    <Compile Include="BookStore\SearchResultSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\SeleniumSupport.cs" />
     <Compile Include="Support\WebDriverExtensions.cs" />

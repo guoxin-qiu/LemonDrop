@@ -12,12 +12,6 @@ namespace LemonDrop.AcceptanceTests.StepDefinitions.BookStore
         {
             _homeDriver = homeDriver;
         }
-
-        [Given(@"the following books")]
-        public void GivenTheFollowingBooks(Table givenBooks)
-        {
-            _homeDriver.AddToWarehouse(givenBooks);
-        }
         
         [When(@"I enter the shop")]
         public void WhenIEnterTheShop()

@@ -34,5 +34,14 @@ namespace LemonDrop.Website.Mvc.Controllers
                 return View("List", books);
             }
         }
+
+        public ActionResult Details(int id)
+        {
+            using(var context = new BookStoreContext())
+            {
+                var book = context.Books.First(b => b.Id == id);
+                return View(book);
+            }
+        }
     }
 }

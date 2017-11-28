@@ -6,9 +6,9 @@ namespace LemonDrop.AcceptanceTests.Support.BookStore
 {
     public class ReferenceBookList : Dictionary<string, Book>
     {
-        public Book GetByTitle(string bookTitle)
+        public Book GetById(string bookId)
         {
-            return this[bookTitle.Trim()].Should().NotBeNull()
+            return this[bookId.Trim()].Should().NotBeNull()
                                       .And.Subject.Should().BeOfType<Book>().Which;
         }
     }
