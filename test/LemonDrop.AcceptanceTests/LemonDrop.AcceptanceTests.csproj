@@ -100,15 +100,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>US04_BookDetails.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Calculator.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Calculator.feature</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\BookStore\BookSearchSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\BookSteps.cs" />
-    <Compile Include="StepDefinitions\CalculatorSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\ShoppingCartSteps.cs" />
     <Compile Include="Support\InjectManage.cs" />
@@ -133,10 +127,6 @@
     <None Include="Features\BookStore\US04_BookDetails.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>US04_BookDetails.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Calculator.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Calculator.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
