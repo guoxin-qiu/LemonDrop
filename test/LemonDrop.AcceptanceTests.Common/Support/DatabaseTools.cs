@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace LemonDrop.WebTests.Mvc.Support
 {
@@ -21,24 +22,9 @@ namespace LemonDrop.WebTests.Mvc.Support
 
         public static List<Book> AddBooksToDb(Table books)
         {
-            // TODO: books.CreateSet<Book>();
-
             using (var context = new BookStoreContext())
             {
-                foreach (var row in books.Rows)
-                {
-                    var book = new Book
-                    {
-                        Author = row["Author"],
-                        Title = row["Title"],
-                        Price = books.Header.Contains("Price")
-                            ? Convert.ToDecimal(row["Price"])
-                            : 10m
-                    };
-
-                    context.Books.Add(book);
-                }
-
+                context.Books.AddRange(books.CreateSet<Book>());
                 context.SaveChanges();
 
                 return context.Books.ToList();
