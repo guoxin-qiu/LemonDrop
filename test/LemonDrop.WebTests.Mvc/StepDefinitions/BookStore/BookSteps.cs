@@ -12,7 +12,6 @@ namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
     [Binding]
     public class BookSteps
     {
-        private const decimal BookDefaultPrice = 10; // need to config
         private readonly CatalogContext _context;
         private ActionResult _result;
 
