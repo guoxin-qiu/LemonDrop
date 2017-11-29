@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 
@@ -36,9 +37,9 @@ namespace LemonDrop.WebTests.Selenium.Support
             System.Threading.Thread.Sleep(100);
         }
 
-        public static void ClickButton(this IWebDriver browser, string buttonId)
+        public static void ClickButton(this IWebDriver browser, string buttonText)
         {
-            browser.FindElements(By.Id(buttonId)).First().Click();
+            browser.FindElements(By.XPath(string.Format("(//input[@type='submit'][@value='{0}']|input[@type='button'][@value='{0}']|//button[text()='{0}'])", buttonText))).First().Click();
         }
 
         private static IWebElement GetFieldControl(IWebDriver browser, string field)
@@ -67,31 +68,41 @@ namespace LemonDrop.WebTests.Selenium.Support
             return new DropDown(e);
         }
 
-        public class DropDown
+        public static string GetPageTitle(this IWebDriver browser)
         {
-            private readonly IWebElement _dropDown;
+            return browser.Title;
+        }
 
-            public DropDown(IWebElement dropDown)
+        public static IEnumerable<string> GetMessages(this IWebDriver browser)
+        {
+            return browser.FindElements(By.ClassName("message")).Select(t => t.Text);
+        }
+    }
+
+    public class DropDown
+    {
+        private readonly IWebElement _dropDown;
+
+        public DropDown(IWebElement dropDown)
+        {
+            this._dropDown = dropDown;
+
+            if (dropDown.TagName != "select")
+                throw new ArgumentException("Invalid web element type");
+        }
+
+        public string SelectedValue
+        {
+            get
             {
-                this._dropDown = dropDown;
+                var selectedOption = _dropDown.FindElements(By.TagName("option")).FirstOrDefault(e => e.Selected);
 
-                if (dropDown.TagName != "select")
-                    throw new ArgumentException("Invalid web element type");
+                return selectedOption?.GetAttribute("value");
+
             }
-
-            public string SelectedValue
+            set
             {
-                get
-                {
-                    var selectedOption = _dropDown.FindElements(By.TagName("option")).FirstOrDefault(e => e.Selected);
-
-                    return selectedOption?.GetAttribute("value");
-
-                }
-                set
-                {
-                    new SelectElement(_dropDown).SelectByValue(value);
-                }
+                new SelectElement(_dropDown).SelectByValue(value);
             }
         }
     }
