@@ -1,30 +1,30 @@
 ﻿using FluentAssertions;
-using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
 using LemonDrop.WebTests.Mvc.Support;
 using LemonDrop.WebTests.Mvc.Support.BookStore;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
+namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
 {
-    public class BookDetailsDriver : IBookDetailsDriver
+    [Binding]
+    public class BookSteps
     {
         private const decimal BookDefaultPrice = 10; // need to config
         private readonly CatalogContext _context;
         private ActionResult _result;
 
-        public BookDetailsDriver(CatalogContext context)
+        public BookSteps(CatalogContext context)
         {
             _context = context;
         }
 
-        public void AddToWarehouse(Table books)
+        [Given(@"the following books")]
+        public void GivenTheFollowingBooks(Table givenBooks)
         {
-            var booksFromDb = DatabaseTools.AddBooksToDb(books);
+            var booksFromDb = DatabaseTools.AddBooksToDb(givenBooks);
 
             foreach (var book in booksFromDb)
             {
@@ -32,7 +32,8 @@ namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
             }
         }
 
-        public void OpenBookDetails(string bookId)
+        [When(@"I open the details of '(.*)'")]
+        public void WhenIOpenTheDetailsOfBook(string bookId)
         {
             var book = _context.ReferenceBooks.GetById(bookId);
             using (var controller = new BookStoreController())
@@ -41,7 +42,8 @@ namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
             }
         }
 
-        public void ShowsBookDetails(Table expectedBookDetails)
+        [Then(@"the book details should show")]
+        public void ThenTheBookDetailsShouldShow(Table expectedBookDetails)
         {
             var shownBookDetails = _result.Model<Book>();
             var row = expectedBookDetails.Rows.Single();

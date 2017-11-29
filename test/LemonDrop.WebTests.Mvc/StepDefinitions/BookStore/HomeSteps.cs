@@ -1,5 +1,4 @@
 ﻿using LemonDrop.AcceptanceTests.Common.Support;
-using LemonDrop.AcceptanceTests.Common.TestDriverInterfaces.BookStore;
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
 using LemonDrop.WebTests.Mvc.Support;
@@ -8,21 +7,24 @@ using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Mvc.TestDriverImplementations.BookStore
+namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
 {
-    public class HomeDriver : IHomeDriver
+    [Binding]
+    public class HomeSteps
     {
         private ActionResult _result;
-
-        public void Navigate()
+        
+        [When(@"I enter the bookstore")]
+        public void WhenIEnterTheBookstore()
         {
             using (var controller = new BookStoreController())
             {
                 _result = controller.Index();
             }
         }
-
-        public void ShowsBooks(Table expectedBooks)
+        
+        [Then(@"the home screen should show the following books")]
+        public void ThenTheHomeScreenShouldShowTheFollowingBooks(Table expectedBooks)
         {
             var expectedTitles = expectedBooks.Rows.Select(t => t["Title"]);
             var shownBooks = _result.Model<IEnumerable<Book>>();

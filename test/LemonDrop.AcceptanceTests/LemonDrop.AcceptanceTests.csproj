@@ -101,11 +101,6 @@
       <DependentUpon>US04_BookDetails.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions\BookStore\BookSearchSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\BookSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\ShoppingCartSteps.cs" />
-    <Compile Include="Support\InjectManage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -140,10 +135,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LemonDrop.AcceptanceTests.Common\LemonDrop.AcceptanceTests.Common.csproj">
-      <Project>{e05546b4-e9c3-4202-bbc4-ca3164c76190}</Project>
-      <Name>LemonDrop.AcceptanceTests.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LemonDrop.WebTests.Mvc\LemonDrop.WebTests.Mvc.csproj">
       <Project>{4181792c-9c68-4219-86cf-c5015efca464}</Project>
       <Name>LemonDrop.WebTests.Mvc</Name>

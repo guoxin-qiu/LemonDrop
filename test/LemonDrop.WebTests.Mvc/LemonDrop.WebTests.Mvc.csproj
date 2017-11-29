@@ -82,10 +82,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestDriverImplementations\BookStore\BookDetailsDriver.cs" />
-    <Compile Include="TestDriverImplementations\BookStore\HomeDriver.cs" />
-    <Compile Include="TestDriverImplementations\BookStore\SearchDriver.cs" />
-    <Compile Include="TestDriverImplementations\BookStore\ShoppingCartDriver.cs" />
+    <Compile Include="StepDefinitions\BookStore\BookSearchSteps.cs" />
+    <Compile Include="StepDefinitions\BookStore\BookSteps.cs" />
+    <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
+    <Compile Include="StepDefinitions\BookStore\ShoppingCartSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\ActionResultExtensions.cs" />
     <Compile Include="Support\BookStore\CatalogContext.cs" />

@@ -62,10 +62,6 @@
     <Compile Include="Support\BookAssertions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\DatabaseTools.cs" />
-    <Compile Include="TestDriverInterfaces\BookStore\IBookDetailsDriver.cs" />
-    <Compile Include="TestDriverInterfaces\BookStore\IHomeDriver.cs" />
-    <Compile Include="TestDriverInterfaces\BookStore\ISearchDriver.cs" />
-    <Compile Include="TestDriverInterfaces\BookStore\IShoppingCartDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\LemonDrop.Website.Mvc\LemonDrop.Website.Mvc.csproj">

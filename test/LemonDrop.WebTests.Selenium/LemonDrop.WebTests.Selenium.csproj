@@ -64,12 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\HomeSteps.cs" />
+    <Compile Include="StepDefinitions\SearchResultSteps.cs" />
+    <Compile Include="StepDefinitions\SearchSteps.cs" />
+    <Compile Include="Support\SeleniumStepsBase.cs" />
     <Compile Include="Support\SeleniumSupport.cs" />
     <Compile Include="Support\WebDriverExtensions.cs" />
     <Compile Include="Support\SeleniumController.cs" />
-    <Compile Include="TestDriverImplementations\SearchDriver.cs" />
-    <Compile Include="TestDriverImplementations\DriverBase.cs" />
-    <Compile Include="TestDriverImplementations\HomeDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
