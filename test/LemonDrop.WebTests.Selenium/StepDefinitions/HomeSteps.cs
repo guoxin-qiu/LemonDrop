@@ -12,14 +12,14 @@ namespace LemonDrop.WebTests.Selenium.StepDefinitions
         [When(@"I enter the bookstore")]
         public void WhenIEnterTheBookstore()
         {
-            selenium.NavigateTo("BookStore/Index");
+            _selenium.NavigateTo("BookStore/Index");
         }
 
         [Then(@"the home screen should show the following books")]
         public void ThenTheHomeScreenShouldShowTheFollowingBooks(Table expectedBooks)
         {
             var expectedTitles = expectedBooks.Rows.Select(t => t["Title"]);
-            var foundBooks = from row in selenium.FindElements(By.XPath("//table/tbody/tr"))
+            var foundBooks = from row in _selenium.FindElements(By.XPath("//table/tbody/tr"))
                              let title = row.FindElement(By.ClassName("title")).Text
                              let author = row.FindElement(By.ClassName("author")).Text
                              let price = row.FindElement(By.ClassName("price")).Text

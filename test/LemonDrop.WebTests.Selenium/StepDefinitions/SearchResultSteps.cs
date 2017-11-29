@@ -12,13 +12,13 @@ namespace LemonDrop.WebTests.Selenium.StepDefinitions
         [When(@"I sort the search result table by Author")]
         public void WhenISortTheSearchResultTableByAuthor()
         {
-            selenium.FindElements(By.XPath("//table[@id='searchResultTable']/thead/tr/th/em[text()='Author']")).First().Click();
+            _selenium.FindElements(By.XPath("//table[@id='searchResultTable']/thead/tr/th/em[text()='Author']")).First().Click();
         }
 
         [When(@"I sort the search result table by Title")]
         public void WhenISortTheSearchResultTableByTitle()
         {
-            selenium.FindElements(By.XPath("//table[@id='searchResultTable']/thead/tr/th/em[text()='Title']")).First().Click();
+            _selenium.FindElements(By.XPath("//table[@id='searchResultTable']/thead/tr/th/em[text()='Title']")).First().Click();
         }
 
         [Then(@"the search result list should display the books in the following order")]
@@ -29,7 +29,7 @@ namespace LemonDrop.WebTests.Selenium.StepDefinitions
                                 let title = tableRow["Title"]
                                 select new Book { Author = author, Title = title };
 
-            var tableRows = selenium.FindElements(By.XPath("//table[@id='searchResultTable']/tbody/tr"));
+            var tableRows = _selenium.FindElements(By.XPath("//table[@id='searchResultTable']/tbody/tr"));
 
             var actualBooks = from tr in tableRows
                               let title = tr.FindElement(By.XPath("//td[1]/h4")).Text

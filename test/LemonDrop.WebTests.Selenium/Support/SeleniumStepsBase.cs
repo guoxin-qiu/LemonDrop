@@ -6,9 +6,6 @@ namespace LemonDrop.WebTests.Selenium.Support
     [Binding, Scope(Tag = "web")]
     public abstract class SeleniumStepsBase
     {
-        protected IWebDriver selenium
-        {
-            get { return SeleniumController.Instance.Selenium; }
-        }
+        protected IWebDriver _selenium => SeleniumController.Instance.Selenium;
     }
 }

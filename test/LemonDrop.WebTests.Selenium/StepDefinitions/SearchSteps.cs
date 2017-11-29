@@ -12,17 +12,17 @@ namespace LemonDrop.WebTests.Selenium.StepDefinitions
         [When(@"I search for books by the phrase '(.*)'")]
         public void WhenISearchForBooksByThePhrase(string searchTerm)
         {
-            selenium.NavigateTo("BookStore/Index");
+            _selenium.NavigateTo("BookStore/Index");
 
-            selenium.SetTextBoxValue("searchTerm", searchTerm);
-            selenium.SubmitForm("searchForm");
+            _selenium.SetTextBoxValue("searchTerm", searchTerm);
+            _selenium.SubmitForm("searchForm");
         }
 
         [Then(@"the list of found books should contain only: '(.*)'")]
         public void ThenTheListOfFoundBooksShouldContainOnly(string expectedTitleList)
         {
             var expectedTitles = expectedTitleList.Split(',').Select(t => t.Trim().Trim('\''));
-            var foundBooks = from row in selenium.FindElements(By.XPath("//table/tbody/tr"))
+            var foundBooks = from row in _selenium.FindElements(By.XPath("//table/tbody/tr"))
                              let title = row.FindElement(By.ClassName("title")).Text
                              let author = row.FindElement(By.ClassName("author")).Text
                              select new Book { Title = title, Author = author };
@@ -34,7 +34,7 @@ namespace LemonDrop.WebTests.Selenium.StepDefinitions
         public void ThenTheListOfFoundBooksShouldBe(Table expectedBooks)
         {
             var expectedTitles = expectedBooks.Rows.Select(r => r["Title"]);
-            var foundBooks = from row in selenium.FindElements(By.XPath("//table/tbody/tr"))
+            var foundBooks = from row in _selenium.FindElements(By.XPath("//table/tbody/tr"))
                              let title = row.FindElement(By.ClassName("title")).Text
                              let author = row.FindElement(By.ClassName("author")).Text
                              select new Book { Title = title, Author = author };
