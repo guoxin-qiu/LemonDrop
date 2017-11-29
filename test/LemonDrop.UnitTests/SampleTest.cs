@@ -19,7 +19,7 @@ namespace LemonDrop.UnitTests
         [InlineData(3, 4)]
         public void SecondTest(int firstNumber, int secondNumber)
         {
-            firstNumber.Should().Equals(secondNumber);
+            firstNumber.Should().Be(secondNumber);
         }
     }
 }
