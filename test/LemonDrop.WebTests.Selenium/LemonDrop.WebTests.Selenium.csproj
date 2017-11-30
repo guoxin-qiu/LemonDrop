@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\Account\UserRegistrationSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\SearchResultSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\SearchSteps.cs" />
@@ -85,8 +86,6 @@
       <Name>LemonDrop.AcceptanceTests.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StepDefinitions\Account\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,6 @@
 ﻿@Account
 @automated
+@web
 Feature: US01 - User Registration
 	In order to use the website
 	As a potential user

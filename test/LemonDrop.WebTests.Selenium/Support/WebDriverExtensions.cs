@@ -1,14 +1,18 @@
-﻿using OpenQA.Selenium;
+﻿using FluentAssertions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using TechTalk.SpecFlow;
 
 namespace LemonDrop.WebTests.Selenium.Support
 {
     public static class WebDriverExtensions
     {
+        private static string bar_replacer = "#$$#"; // replace '|'
+
         public static string GetTextBoxValue(this IWebDriver browser, string field)
         {
             var control = GetFieldControl(browser, field);
@@ -40,6 +44,7 @@ namespace LemonDrop.WebTests.Selenium.Support
         public static void ClickButton(this IWebDriver browser, string buttonText)
         {
             browser.FindElements(By.XPath(string.Format("(//input[@type='submit'][@value='{0}']|input[@type='button'][@value='{0}']|//button[text()='{0}'])", buttonText))).First().Click();
+            System.Threading.Thread.Sleep(100);
         }
 
         private static IWebElement GetFieldControl(IWebDriver browser, string field)
@@ -68,14 +73,109 @@ namespace LemonDrop.WebTests.Selenium.Support
             return new DropDown(e);
         }
 
-        public static string GetPageTitle(this IWebDriver browser)
+        public static string GetAbsolutePageTitle(this IWebDriver browser)
         {
-            return browser.Title;
+            return browser.Title.Replace(" - LemonDrop", "");
         }
 
-        public static IEnumerable<string> GetMessages(this IWebDriver browser)
+        public static IEnumerable<string> Messages(this IWebDriver browser)
         {
             return browser.FindElements(By.ClassName("message")).Select(t => t.Text);
+        }
+
+        public static IEnumerable<string> ErrorMessages(this IWebDriver browser)
+        {
+            return browser.FindElements(By.ClassName("text-danger")).Select(t => t.Text);
+        }
+
+        public static IEnumerable<string> ValidationErrors(this IWebDriver browser)
+        {
+            return browser.FindElements(By.ClassName("validation-summary-errors"))
+                                .SelectMany(t => t.FindElements(By.XPath("//ul/li")))
+                                .Select(t => t.Text);
+        }
+
+        public static void FillForm(this IWebDriver browser, Table table)
+        {
+            var inputs = browser.FindElements(By.XPath("//input|//textarea|//select"))
+                ?? Enumerable.Empty<IWebElement>();
+
+            var curRow = table.Rows[0];
+            foreach (var name in table.Header)
+            {
+                var curName = name;
+                var curCellData = curRow[curName].Replace(bar_replacer, "|");
+                var input = inputs.FirstOrDefault(x => x.GetAttribute("name").ToLower() == curName.ToLower());
+                if(input is null)
+                {
+                    input.Should().NotBeNull("Unable to find element name '{0}'", curName);
+                }
+                var inputType = input.GetAttribute("type");
+                switch (inputType)
+                {
+                    case "radio":
+                        var radios = inputs.Where(
+                            x =>
+                            x.GetAttribute("type") == "radio" &&
+                            x.GetAttribute("name").ToLower() == curName.ToLower());
+                        var radio = radios.FirstOrDefault(x => x.GetAttribute("value") == curCellData);
+                        if (radio is null)
+                        {
+                            foreach (var r in radios)
+                            {
+                                if (r.FindElement(By.XPath("./parent::*")).Text == curCellData)//eg: <label><input name="Gender" type="radio">Male</label>
+                                {
+                                    radio = r;
+                                    break;
+                                }
+                            }
+                        }
+                        radio.Should().NotBeNull("Unable to locate radio name '{0}' value '{1}'", curName, curCellData);
+                        radio.Click();
+                        break;
+                    case "checkbox":
+                        var chkValues = curCellData.Split('^');
+                        var chks = inputs.Where(
+                            x =>
+                            x.GetAttribute("type") == "checkbox" &&
+                            x.GetAttribute("name").ToLower() == curName.ToLower());
+                        if (chks != null) {
+                            foreach (var chk in chks)
+                            {
+                                if (chkValues.Contains(chk.GetAttribute("value")) ||
+                                    chkValues.Contains(chk.FindElement(By.XPath("./parent::*")).Text))
+                                {
+                                    if (!chk.Selected)
+                                        chk.Click();
+                                }
+                                else
+                                {
+                                    if (chk.Selected)
+                                        chk.Click();
+                                }
+                            }
+                        }
+                        chks.Should().NotBeNull("Unable to locate checkbox name '{0}'", curName);
+                        break;
+                    default:
+                        if (string.Equals(input.TagName, "select", StringComparison.OrdinalIgnoreCase))
+                        {
+                            SelectElement select = new SelectElement(input);
+                            if (select.IsMultiple)
+                            {
+                                select.DeselectAll();
+                                curCellData.Split('^').ToList().ForEach(x => select.SelectByText(x));
+                            }
+                            else
+                                select.SelectByText(curCellData);
+                        }
+                        else
+                        {
+                            input.SendKeys(curRow[curName]);
+                        }
+                        break;
+                }
+            }
         }
     }
 
