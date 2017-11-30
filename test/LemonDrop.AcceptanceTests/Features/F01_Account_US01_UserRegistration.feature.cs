@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace LemonDrop.AcceptanceTests.Features.Account
+namespace LemonDrop.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -25,7 +25,7 @@ namespace LemonDrop.AcceptanceTests.Features.Account
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "US01_UserRegistration.feature"
+#line 1 "F01_Account_US01_UserRegistration.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -65,7 +65,7 @@ namespace LemonDrop.AcceptanceTests.Features.Account
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "US01 - User Registration")))
             {
-                global::LemonDrop.AcceptanceTests.Features.Account.US01_UserRegistrationFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.US01_UserRegistrationFeature.FeatureSetup(null);
             }
         }
         

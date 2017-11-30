@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace LemonDrop.AcceptanceTests.Features.BookStore
+namespace LemonDrop.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -25,7 +25,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "US03_ShopingCart.feature"
+#line 1 "F02_BookStore_US03_ShopingCart.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -64,7 +64,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "US03 - Shopping cart")))
             {
-                global::LemonDrop.AcceptanceTests.Features.BookStore.US03_ShoppingCartFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.US03_ShoppingCartFeature.FeatureSetup(null);
             }
         }
         

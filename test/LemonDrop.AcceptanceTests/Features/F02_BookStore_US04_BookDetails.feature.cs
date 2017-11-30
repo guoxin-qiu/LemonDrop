@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace LemonDrop.AcceptanceTests.Features.BookStore
+namespace LemonDrop.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -18,14 +18,14 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US01_HomeScreenFeature
+    public partial class US04_BookDetailsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "US01_HomeScreen.feature"
+#line 1 "F02_BookStore_US04_BookDetails.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,11 +44,10 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US01 - Home Screen", "\tAs a potential customer\r\n\tI want to see the books with the best price\r\n\tSo that " +
-                    "I can save money on buying discounted books.", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US04 - Book details", "\tAs a potential customer\r\n\tI want to see the details of a book\r\n\tSo that I can be" +
+                    "tter decide to buy it.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore",
-                        "web"});
+                        "BookStore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,9 +62,9 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US01 - Home Screen")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "US04 - Book details")))
             {
-                global::LemonDrop.AcceptanceTests.Features.BookStore.US01_HomeScreenFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.US04_BookDetailsFeature.FeatureSetup(null);
             }
         }
         
@@ -88,7 +87,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         
         public virtual void FeatureBackground()
         {
-#line 9
+#line 8
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Author",
@@ -110,37 +109,36 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
                         "Gojko Adzic",
                         "Bridging the Communication Gap",
                         "24.75"});
-#line 10
+#line 9
  testRunner.Given("the following books", ((string)(null)), table1, "Given ");
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Cheapest 3 books should be listed on the home screen")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - Home Screen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("The author, the title and the price of a book can be seen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US04 - Book details")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
-        public virtual void Cheapest3BooksShouldBeListedOnTheHomeScreen()
+        public virtual void TheAuthorTheTitleAndThePriceOfABookCanBeSeen()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cheapest 3 books should be listed on the home screen", ((string[])(null)));
-#line 17
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The author, the title and the price of a book can be seen", ((string[])(null)));
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 8
 this.FeatureBackground();
-#line 18
- testRunner.When("I enter the bookstore", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+ testRunner.When("I open the details of \'Analysis Patterns\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Title"});
+                        "Author",
+                        "Title",
+                        "Price"});
             table2.AddRow(new string[] {
-                        "Bridging the Communication Gap"});
-            table2.AddRow(new string[] {
-                        "Inside Windows SharePoint Services"});
-            table2.AddRow(new string[] {
-                        "Domain Driven Design"});
-#line 19
- testRunner.Then("the home screen should show the following books", ((string)(null)), table2, "Then ");
+                        "Martin Fowler",
+                        "Analysis Patterns",
+                        "50.20"});
+#line 18
+ testRunner.Then("the book details should show", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

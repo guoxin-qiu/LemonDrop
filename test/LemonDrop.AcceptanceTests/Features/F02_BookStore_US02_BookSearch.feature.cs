@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace LemonDrop.AcceptanceTests.Features.BookStore
+namespace LemonDrop.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -25,7 +25,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "US02_BookSearch.feature"
+#line 1 "F02_BookStore_US02_BookSearch.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -65,7 +65,7 @@ namespace LemonDrop.AcceptanceTests.Features.BookStore
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "US02 - Book Search")))
             {
-                global::LemonDrop.AcceptanceTests.Features.BookStore.US02_BookSearchFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.US02_BookSearchFeature.FeatureSetup(null);
             }
         }
         

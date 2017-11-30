@@ -80,30 +80,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Account\US01_UserRegistration.feature.cs">
+    <Compile Include="Features\F01_Account_US01_UserRegistration.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>US01_UserRegistration.feature</DependentUpon>
+      <DependentUpon>F01_Account_US01_UserRegistration.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\BookStore\US01_HomeScreen.feature.cs">
+    <Compile Include="Features\F02_BookStore_US01_HomeScreen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>US01_HomeScreen.feature</DependentUpon>
+      <DependentUpon>F02_BookStore_US01_HomeScreen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\BookStore\US02_BookSearch.feature.cs">
+    <Compile Include="Features\F02_BookStore_US02_BookSearch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>US02_BookSearch.feature</DependentUpon>
+      <DependentUpon>F02_BookStore_US02_BookSearch.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\BookStore\US03_ShopingCart.feature.cs">
+    <Compile Include="Features\F02_BookStore_US03_ShopingCart.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>US03_ShopingCart.feature</DependentUpon>
+      <DependentUpon>F02_BookStore_US03_ShopingCart.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\BookStore\US04_BookDetails.feature.cs">
+    <Compile Include="Features\F02_BookStore_US04_BookDetails.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>US04_BookDetails.feature</DependentUpon>
+      <DependentUpon>F02_BookStore_US04_BookDetails.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -114,25 +114,25 @@
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\Account\US01_UserRegistration.feature">
+    <None Include="Features\F01_Account_US01_UserRegistration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>US01_UserRegistration.feature.cs</LastGenOutput>
+      <LastGenOutput>F01_Account_US01_UserRegistration.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BookStore\US01_HomeScreen.feature">
+    <None Include="Features\F02_BookStore_US01_HomeScreen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>US01_HomeScreen.feature.cs</LastGenOutput>
+      <LastGenOutput>F02_BookStore_US01_HomeScreen.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BookStore\US02_BookSearch.feature">
+    <None Include="Features\F02_BookStore_US02_BookSearch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>US02_BookSearch.feature.cs</LastGenOutput>
+      <LastGenOutput>F02_BookStore_US02_BookSearch.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BookStore\US03_ShopingCart.feature">
+    <None Include="Features\F02_BookStore_US03_ShopingCart.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>US03_ShopingCart.feature.cs</LastGenOutput>
+      <LastGenOutput>F02_BookStore_US03_ShopingCart.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BookStore\US04_BookDetails.feature">
+    <None Include="Features\F02_BookStore_US04_BookDetails.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>US04_BookDetails.feature.cs</LastGenOutput>
+      <LastGenOutput>F02_BookStore_US04_BookDetails.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
