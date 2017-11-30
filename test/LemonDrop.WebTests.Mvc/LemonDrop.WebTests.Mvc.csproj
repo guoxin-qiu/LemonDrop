@@ -82,6 +82,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StepDefinitions\Account\UserRegistrationSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\BookSearchSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\BookSteps.cs" />
     <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
