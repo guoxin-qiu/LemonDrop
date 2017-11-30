@@ -7,15 +7,15 @@ using System.Web.Mvc;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
-namespace LemonDrop.WebTests.Mvc.StepDefinitions.Account
+namespace LemonDrop.WebTests.Mvc.StepDefinitions
 {
     [Binding]
-    public class UserRegistrationSteps
+    public class Account_UserRegistration_Steps
     {
         private ActionResult _result;
         private AccountController _accountController;
 
-        public UserRegistrationSteps()
+        public Account_UserRegistration_Steps()
         {
             _accountController = new AccountController();
         }

@@ -5,9 +5,9 @@ using OpenQA.Selenium;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Selenium.StepDefinitions
 {
-    public class SearchSteps : SeleniumStepsBase
+    public class Bookstore_Search_Steps : SeleniumStepsBase
     {
         [When(@"I search for books by the phrase '(.*)'")]
         public void WhenISearchForBooksByThePhrase(string searchTerm)

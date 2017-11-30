@@ -1,4 +1,4 @@
-﻿namespace LemonDrop.WebTests.Mvc.Support.BookStore
+﻿namespace LemonDrop.WebTests.Mvc.Support.Bookstore
 {
     public class CatalogContext
     {

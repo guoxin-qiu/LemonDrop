@@ -82,15 +82,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StepDefinitions\Account\UserRegistrationSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\BookSearchSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\BookSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\ShoppingCartSteps.cs" />
+    <Compile Include="StepDefinitions\Account_UserRegistration_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_BookSearch_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_Book_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_Home_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_ShoppingCart_Steps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\ActionResultExtensions.cs" />
-    <Compile Include="Support\BookStore\CatalogContext.cs" />
-    <Compile Include="Support\BookStore\ReferenceBookList.cs" />
+    <Compile Include="Support\Bookstore\CatalogContext.cs" />
+    <Compile Include="Support\Bookstore\ReferenceBookList.cs" />
     <Compile Include="Support\HttpContextStub.cs" />
   </ItemGroup>
   <ItemGroup>

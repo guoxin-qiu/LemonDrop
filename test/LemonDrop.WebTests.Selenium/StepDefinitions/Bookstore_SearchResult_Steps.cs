@@ -5,9 +5,9 @@ using OpenQA.Selenium;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Selenium.StepDefinitions
 {
-    public class SearchResultSteps : SeleniumStepsBase
+    public class Bookstore_SearchResult_Steps : SeleniumStepsBase
     {
         [When(@"I sort the search result table by Author")]
         public void WhenISortTheSearchResultTableByAuthor()

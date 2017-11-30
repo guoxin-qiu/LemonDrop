@@ -7,10 +7,10 @@ using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Mvc.StepDefinitions
 {
     [Binding]
-    public class HomeSteps
+    public class Bookstore_Home_Steps
     {
         private ActionResult _result;
         

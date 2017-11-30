@@ -64,10 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions\Account\UserRegistrationSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\HomeSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\SearchResultSteps.cs" />
-    <Compile Include="StepDefinitions\BookStore\SearchSteps.cs" />
+    <Compile Include="StepDefinitions\Account_UserRegistration_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_Home_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_SearchResult_Steps.cs" />
+    <Compile Include="StepDefinitions\Bookstore_Search_Steps.cs" />
     <Compile Include="Support\SeleniumStepsBase.cs" />
     <Compile Include="Support\SeleniumSupport.cs" />
     <Compile Include="Support\WebDriverExtensions.cs" />

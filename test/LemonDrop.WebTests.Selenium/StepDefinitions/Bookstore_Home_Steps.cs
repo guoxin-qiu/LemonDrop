@@ -5,9 +5,9 @@ using OpenQA.Selenium;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Selenium.StepDefinitions
 {
-    public class HomeSteps: SeleniumStepsBase
+    public class Bookstore_Home_Steps: SeleniumStepsBase
     {
         [When(@"I enter the bookstore")]
         public void WhenIEnterTheBookstore()

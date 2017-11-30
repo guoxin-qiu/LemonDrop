@@ -3,9 +3,9 @@ using LemonDrop.WebTests.Selenium.Support;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.StepDefinitions.Account
+namespace LemonDrop.WebTests.Selenium.StepDefinitions
 {
-    public class UserRegistrationSteps: SeleniumStepsBase
+    public class Account_UserRegistration_Steps: SeleniumStepsBase
     {
         [When(@"I submit the following information on Register page")]
         public void WhenISubmitTheFollowingInformationOnRegisterPage(Table table)

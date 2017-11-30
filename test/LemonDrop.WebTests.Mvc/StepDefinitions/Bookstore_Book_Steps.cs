@@ -2,20 +2,20 @@
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
 using LemonDrop.WebTests.Mvc.Support;
-using LemonDrop.WebTests.Mvc.Support.BookStore;
+using LemonDrop.WebTests.Mvc.Support.Bookstore;
 using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Mvc.StepDefinitions
 {
     [Binding]
-    public class BookSteps
+    public class Bookstore_Book_Steps
     {
         private readonly CatalogContext _context;
         private ActionResult _result;
 
-        public BookSteps(CatalogContext context)
+        public Bookstore_Book_Steps(CatalogContext context)
         {
             _context = context;
         }

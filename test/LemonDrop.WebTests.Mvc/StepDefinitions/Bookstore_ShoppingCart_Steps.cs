@@ -2,19 +2,19 @@
 using LemonDrop.Website.Mvc.Controllers;
 using LemonDrop.Website.Mvc.Models;
 using LemonDrop.WebTests.Mvc.Support;
-using LemonDrop.WebTests.Mvc.Support.BookStore;
+using LemonDrop.WebTests.Mvc.Support.Bookstore;
 using System;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Mvc.StepDefinitions.BookStore
+namespace LemonDrop.WebTests.Mvc.StepDefinitions
 {
     [Binding]
-    public class ShoppingCartSteps
+    public class Bookstore_ShoppingCart_Steps
     {
         private readonly CatalogContext _catalogContext;
 
-        public ShoppingCartSteps(CatalogContext catalogContext)
+        public Bookstore_ShoppingCart_Steps(CatalogContext catalogContext)
         {
             _catalogContext = catalogContext ?? throw new ArgumentNullException(nameof(catalogContext));
         }
