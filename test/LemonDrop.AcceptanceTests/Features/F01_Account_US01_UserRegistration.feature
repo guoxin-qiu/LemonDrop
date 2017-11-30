@@ -1,7 +1,7 @@
 ﻿@Account
 @automated
 @web
-Feature: US01 - User Registration
+Feature: F01 - Account - US01 - User Registration
 	In order to use the website
 	As a potential user
 	I want to register as a formal user

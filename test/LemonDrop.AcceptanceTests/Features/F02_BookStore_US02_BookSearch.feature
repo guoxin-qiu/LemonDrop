@@ -1,7 +1,7 @@
 ﻿@automated
-@BookStore
+@Bookstore
 @web
-Feature: US02 - Book Search
+Feature: F02 - Bookstore - US02 - Book Search
 	As a potential customer
 	I want to search for books by a simple phrase
 	So that I can easily allocate books by something I remember from them.

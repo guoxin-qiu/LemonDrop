@@ -18,7 +18,7 @@ namespace LemonDrop.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US02_BookSearchFeature
+    public partial class F02_Bookstore_US02_BookSearchFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,10 +44,10 @@ namespace LemonDrop.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US02 - Book Search", "\tAs a potential customer\r\n\tI want to search for books by a simple phrase\r\n\tSo tha" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F02 - Bookstore - US02 - Book Search", "\tAs a potential customer\r\n\tI want to search for books by a simple phrase\r\n\tSo tha" +
                     "t I can easily allocate books by something I remember from them.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore",
+                        "Bookstore",
                         "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -63,9 +63,9 @@ namespace LemonDrop.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US02 - Book Search")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "F02 - Bookstore - US02 - Book Search")))
             {
-                global::LemonDrop.AcceptanceTests.Features.US02_BookSearchFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.F02_Bookstore_US02_BookSearchFeature.FeatureSetup(null);
             }
         }
         
@@ -112,9 +112,9 @@ namespace LemonDrop.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Title should be matched")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void TitleShouldBeMatched()
         {
@@ -138,9 +138,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Author should be matched")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void AuthorShouldBeMatched()
         {
@@ -164,9 +164,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Space should be treated as multiple OR search")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void SpaceShouldBeTreatedAsMultipleORSearch()
         {
@@ -192,9 +192,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search result should be ordered by book title")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void SearchResultShouldBeOrderedByBookTitle()
         {
@@ -235,9 +235,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Simple search: Domain")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Domain")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:search phrase", "Domain")]
@@ -251,9 +251,9 @@ this.SimpleSearch("Domain", "\'Domain Driven Design\'", ((string[])(null)));
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Simple search: Windows Communication")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02 - Book Search")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US02 - Book Search")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Windows Communication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:search phrase", "Windows Communication")]

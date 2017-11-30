@@ -18,7 +18,7 @@ namespace LemonDrop.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US01_UserRegistrationFeature
+    public partial class F01_Account_US01_UserRegistrationFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace LemonDrop.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US01 - User Registration", "\tIn order to use the website\r\n\tAs a potential user\r\n\tI want to register as a form" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F01 - Account - US01 - User Registration", "\tIn order to use the website\r\n\tAs a potential user\r\n\tI want to register as a form" +
                     "al user", ProgrammingLanguage.CSharp, new string[] {
                         "Account",
                         "automated",
@@ -63,9 +63,9 @@ namespace LemonDrop.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US01 - User Registration")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "F01 - Account - US01 - User Registration")))
             {
-                global::LemonDrop.AcceptanceTests.Features.US01_UserRegistrationFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.F01_Account_US01_UserRegistrationFeature.FeatureSetup(null);
             }
         }
         
@@ -88,7 +88,7 @@ namespace LemonDrop.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register successfully")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -129,7 +129,7 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register successfully again")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -198,7 +198,7 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 0")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -219,7 +219,7 @@ this.RegisterFailed("", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!", "\'Ema
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 1")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -240,7 +240,7 @@ this.RegisterFailed("invalid@", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!"
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 2")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -261,7 +261,7 @@ this.RegisterFailed("denis@lemon-drop.net", "", "", "Male", "p@55w0rd!", "p@55w0
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -282,7 +282,7 @@ this.RegisterFailed("denis@lemon-drop.net", "Denis", "", "Male", "p@55w0rd!", "p
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 4")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
@@ -303,7 +303,7 @@ this.RegisterFailed("denis@lemon-drop.net", "Denis", "Qiu", "Male", "p@55w", "p@
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 5")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]

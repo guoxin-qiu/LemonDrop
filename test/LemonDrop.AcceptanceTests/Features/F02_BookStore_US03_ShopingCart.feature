@@ -1,6 +1,6 @@
 ﻿@automated
-@BookStore
-Feature: US03 - Shopping cart
+@Bookstore
+Feature: F02 - Bookstore - US03 - Shopping cart
 	As a potential customer
 	I want to collect books in a shopping cart
 	So that I can order several books at once.

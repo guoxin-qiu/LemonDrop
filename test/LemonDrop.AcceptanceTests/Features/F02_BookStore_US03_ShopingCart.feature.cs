@@ -18,7 +18,7 @@ namespace LemonDrop.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US03_ShoppingCartFeature
+    public partial class F02_Bookstore_US03_ShoppingCartFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,10 +44,10 @@ namespace LemonDrop.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US03 - Shopping cart", "\tAs a potential customer\r\n\tI want to collect books in a shopping cart\r\n\tSo that I" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F02 - Bookstore - US03 - Shopping cart", "\tAs a potential customer\r\n\tI want to collect books in a shopping cart\r\n\tSo that I" +
                     " can order several books at once.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore"});
+                        "Bookstore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -62,9 +62,9 @@ namespace LemonDrop.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US03 - Shopping cart")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "F02 - Bookstore - US03 - Shopping cart")))
             {
-                global::LemonDrop.AcceptanceTests.Features.US03_ShoppingCartFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.F02_Bookstore_US03_ShoppingCartFeature.FeatureSetup(null);
             }
         }
         
@@ -116,9 +116,9 @@ namespace LemonDrop.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Books can be placed into shopping cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void BooksCanBePlacedIntoShoppingCart()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Books can be placed into shopping cart", ((string[])(null)));
@@ -142,9 +142,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Shopping cart should show total number of items and total price")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void ShoppingCartShouldShowTotalNumberOfItemsAndTotalPrice()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Shopping cart should show total number of items and total price", ((string[])(null)));
@@ -168,9 +168,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("The shopping cart should be initially empty")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void TheShoppingCartShouldBeInitiallyEmpty()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The shopping cart should be initially empty", ((string[])(null)));
@@ -188,9 +188,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("A type of book can be entirely removed from the shopping cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void ATypeOfBookCanBeEntirelyRemovedFromTheShoppingCart()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A type of book can be entirely removed from the shopping cart", ((string[])(null)));
@@ -210,9 +210,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Adding the same book to shopping cart again should increase quantity")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void AddingTheSameBookToShoppingCartAgainShouldIncreaseQuantity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding the same book to shopping cart again should increase quantity", ((string[])(null)));
@@ -234,9 +234,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quantity of a book can be changed")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void QuantityOfABookCanBeChanged()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quantity of a book can be changed", ((string[])(null)));
@@ -258,9 +258,9 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Changing quantity of book to 0 should remove book from shopping cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US03 - Shopping cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US03 - Shopping cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void ChangingQuantityOfBookTo0ShouldRemoveBookFromShoppingCart()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Changing quantity of book to 0 should remove book from shopping cart", ((string[])(null)));

@@ -1,7 +1,7 @@
 ﻿@automated
-@BookStore
+@Bookstore
 @web
-Feature: US01 - Home Screen
+Feature: F02 - Bookstore - US01 - Home Screen
 	As a potential customer
 	I want to see the books with the best price
 	So that I can save money on buying discounted books.

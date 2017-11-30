@@ -18,7 +18,7 @@ namespace LemonDrop.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US01_HomeScreenFeature
+    public partial class F02_Bookstore_US01_HomeScreenFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,10 +44,10 @@ namespace LemonDrop.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US01 - Home Screen", "\tAs a potential customer\r\n\tI want to see the books with the best price\r\n\tSo that " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F02 - Bookstore - US01 - Home Screen", "\tAs a potential customer\r\n\tI want to see the books with the best price\r\n\tSo that " +
                     "I can save money on buying discounted books.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore",
+                        "Bookstore",
                         "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -63,9 +63,9 @@ namespace LemonDrop.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US01 - Home Screen")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "F02 - Bookstore - US01 - Home Screen")))
             {
-                global::LemonDrop.AcceptanceTests.Features.US01_HomeScreenFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.F02_Bookstore_US01_HomeScreenFeature.FeatureSetup(null);
             }
         }
         
@@ -117,9 +117,9 @@ namespace LemonDrop.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Cheapest 3 books should be listed on the home screen")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - Home Screen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US01 - Home Screen")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void Cheapest3BooksShouldBeListedOnTheHomeScreen()
         {

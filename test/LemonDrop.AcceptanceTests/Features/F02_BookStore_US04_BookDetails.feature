@@ -1,6 +1,6 @@
 ﻿@automated
-@BookStore
-Feature: US04 - Book details
+@Bookstore
+Feature: F02 - Bookstore - US04 - Book details
 	As a potential customer
 	I want to see the details of a book
 	So that I can better decide to buy it.

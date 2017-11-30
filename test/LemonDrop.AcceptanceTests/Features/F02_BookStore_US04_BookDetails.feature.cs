@@ -18,7 +18,7 @@ namespace LemonDrop.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class US04_BookDetailsFeature
+    public partial class F02_Bookstore_US04_BookDetailsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,10 +44,10 @@ namespace LemonDrop.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US04 - Book details", "\tAs a potential customer\r\n\tI want to see the details of a book\r\n\tSo that I can be" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F02 - Bookstore - US04 - Book details", "\tAs a potential customer\r\n\tI want to see the details of a book\r\n\tSo that I can be" +
                     "tter decide to buy it.", ProgrammingLanguage.CSharp, new string[] {
                         "automated",
-                        "BookStore"});
+                        "Bookstore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -62,9 +62,9 @@ namespace LemonDrop.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "US04 - Book details")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "F02 - Bookstore - US04 - Book details")))
             {
-                global::LemonDrop.AcceptanceTests.Features.US04_BookDetailsFeature.FeatureSetup(null);
+                global::LemonDrop.AcceptanceTests.Features.F02_Bookstore_US04_BookDetailsFeature.FeatureSetup(null);
             }
         }
         
@@ -116,9 +116,9 @@ namespace LemonDrop.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("The author, the title and the price of a book can be seen")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US04 - Book details")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F02 - Bookstore - US04 - Book details")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("BookStore")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Bookstore")]
         public virtual void TheAuthorTheTitleAndThePriceOfABookCanBeSeen()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The author, the title and the price of a book can be seen", ((string[])(null)));
