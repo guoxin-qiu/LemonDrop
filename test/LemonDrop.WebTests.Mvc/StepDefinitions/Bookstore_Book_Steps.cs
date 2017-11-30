@@ -35,7 +35,7 @@ namespace LemonDrop.WebTests.Mvc.StepDefinitions
         public void WhenIOpenTheDetailsOfBook(string bookId)
         {
             var book = _context.ReferenceBooks.GetById(bookId);
-            using (var controller = new BookStoreController())
+            using (var controller = new BookstoreController())
             {
                 _result = controller.Details(book.Id);
             }

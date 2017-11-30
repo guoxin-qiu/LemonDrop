@@ -17,7 +17,7 @@ namespace LemonDrop.WebTests.Mvc.StepDefinitions
         [When(@"I search for books by the phrase '(.*)'")]
         public void WhenISearchForBooksByThePhrase(string phrase)
         {
-            var controller = new BookStoreController();
+            var controller = new BookstoreController();
             _result = controller.Search(phrase);
         }
         

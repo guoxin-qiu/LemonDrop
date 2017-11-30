@@ -16,7 +16,7 @@ namespace LemonDrop.Website.Mvc.Controllers
 
         public ActionResult Add(int bookId)
         {
-            using (var context = new BookStoreContext())
+            using (var context = new BookstoreContext())
             {
                 var shoppingCart = GetShoppingCart();
 

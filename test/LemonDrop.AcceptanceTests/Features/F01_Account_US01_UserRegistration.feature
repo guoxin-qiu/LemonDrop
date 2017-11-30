@@ -1,5 +1,5 @@
-﻿@Account
-@automated
+﻿@automated
+@Account
 @web
 Feature: F01 - Account - US01 - User Registration
 	In order to use the website

@@ -13,7 +13,7 @@ namespace LemonDrop.WebTests.Mvc.Support
         [BeforeScenario]
         public static void CleanDatabase()
         {
-            using (var db = new BookStoreContext())
+            using (var db = new BookstoreContext())
             {
                 db.Books.RemoveRange(db.Books);
                 db.SaveChanges();
@@ -22,7 +22,7 @@ namespace LemonDrop.WebTests.Mvc.Support
 
         public static List<Book> AddBooksToDb(Table books)
         {
-            using (var context = new BookStoreContext())
+            using (var context = new BookstoreContext())
             {
                 context.Books.AddRange(books.CreateSet<Book>());
                 context.SaveChanges();

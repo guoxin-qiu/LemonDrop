@@ -18,6 +18,7 @@ namespace LemonDrop.WebTests.Mvc.StepDefinitions
         public Account_UserRegistration_Steps()
         {
             _accountController = new AccountController();
+            HttpContextStub.SetupController(_accountController);
         }
 
         [When(@"I submit the following information on Register page")]

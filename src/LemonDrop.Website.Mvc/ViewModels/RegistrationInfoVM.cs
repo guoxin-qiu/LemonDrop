@@ -22,5 +22,6 @@ namespace LemonDrop.Website.Mvc.ViewModels
         public string ConfirmPassword { get; set; }
 
         public string EncryptPassword => Password;
+        public string FullName => $"{LastName} {FirstName}";
     }
 }

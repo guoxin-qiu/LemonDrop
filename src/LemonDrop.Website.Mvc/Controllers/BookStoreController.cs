@@ -5,11 +5,11 @@ using LinqKit;
 
 namespace LemonDrop.Website.Mvc.Controllers
 {
-    public class BookStoreController : Controller
+    public class BookstoreController : Controller
     {
         public ActionResult Index()
         {
-            using (var context = new BookStoreContext())
+            using (var context = new BookstoreContext())
             {
                 var books = context.Books.OrderBy(t => t.Price).Take(3).ToList();
                 return View(books);
@@ -18,7 +18,7 @@ namespace LemonDrop.Website.Mvc.Controllers
 
         public ActionResult Search(string searchTerm)
         {
-            using( var context = new BookStoreContext())
+            using( var context = new BookstoreContext())
             {
                 var terms = searchTerm?.Split(' ') ?? new string[0];
                 var predicate = terms.Aggregate(
@@ -37,7 +37,7 @@ namespace LemonDrop.Website.Mvc.Controllers
 
         public ActionResult Details(int id)
         {
-            using(var context = new BookStoreContext())
+            using(var context = new BookstoreContext())
             {
                 var book = context.Books.First(b => b.Id == id);
                 return View(book);

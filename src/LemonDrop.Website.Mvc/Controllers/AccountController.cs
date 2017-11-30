@@ -1,8 +1,5 @@
-﻿using LemonDrop.Website.Mvc.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using LemonDrop.Website.Mvc.Models;
+using LemonDrop.Website.Mvc.ViewModels;
 using System.Web.Mvc;
 
 namespace LemonDrop.Website.Mvc.Controllers
@@ -27,20 +24,22 @@ namespace LemonDrop.Website.Mvc.Controllers
 
             if (ModelState.IsValid)
             {
+                //FormsAuthentication.SetAuthCookie(vm.FullName, false);
+                SetUserSession(new UserSession { FullName = vm.FullName, Email = vm.Email });
+
                 return RedirectToAction("Welcome");
             }
 
             return View(vm);
         }
 
-        [AllowAnonymous]
         public ActionResult Welcome()
         {
+            var userInfo = GetUserSession();
             var model = new WelcomeInfoVM
             {
-                Email = "denis@sydq.net",
-                FirstName = "Denis",
-                LastName = "Qiu"
+                WelcomeMsg = $"Hello {userInfo.FullName}, welcome to join us!",
+                AccountMsg = $"Your account is {userInfo.Email}"
             };
             return View(model);
         }

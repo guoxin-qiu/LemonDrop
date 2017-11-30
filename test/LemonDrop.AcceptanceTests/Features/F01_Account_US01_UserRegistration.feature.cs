@@ -46,8 +46,8 @@ namespace LemonDrop.AcceptanceTests.Features
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "F01 - Account - US01 - User Registration", "\tIn order to use the website\r\n\tAs a potential user\r\n\tI want to register as a form" +
                     "al user", ProgrammingLanguage.CSharp, new string[] {
-                        "Account",
                         "automated",
+                        "Account",
                         "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -89,8 +89,8 @@ namespace LemonDrop.AcceptanceTests.Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register successfully")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void RegisterSuccessfully()
         {
@@ -130,8 +130,8 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register successfully again")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void RegisterSuccessfullyAgain()
         {
@@ -199,8 +199,8 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "")]
@@ -220,8 +220,8 @@ this.RegisterFailed("", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!", "\'Ema
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "invalid@")]
@@ -241,8 +241,8 @@ this.RegisterFailed("invalid@", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 2")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
@@ -262,8 +262,8 @@ this.RegisterFailed("denis@lemon-drop.net", "", "", "Male", "p@55w0rd!", "p@55w0
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
@@ -283,8 +283,8 @@ this.RegisterFailed("denis@lemon-drop.net", "Denis", "", "Male", "p@55w0rd!", "p
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 4")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 4")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
@@ -304,8 +304,8 @@ this.RegisterFailed("denis@lemon-drop.net", "Denis", "Qiu", "Male", "p@55w", "p@
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register failed: Variant 5")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "F01 - Account - US01 - User Registration")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 5")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]

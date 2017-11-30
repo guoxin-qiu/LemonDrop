@@ -17,7 +17,7 @@ namespace LemonDrop.WebTests.Mvc.StepDefinitions
         [When(@"I enter the bookstore")]
         public void WhenIEnterTheBookstore()
         {
-            using (var controller = new BookStoreController())
+            using (var controller = new BookstoreController())
             {
                 _result = controller.Index();
             }
