@@ -106,7 +106,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Password",
                         "ConfirmPassword"});
             table1.AddRow(new string[] {
-                        "denis@sydq.net",
+                        "denis@lemon-drop.net",
                         "Denis",
                         "Qiu",
                         "Male",
@@ -120,16 +120,22 @@ this.ScenarioSetup(scenarioInfo);
             table2.AddRow(new string[] {
                         "Hello Qiu Denis, welcome to join us!"});
             table2.AddRow(new string[] {
-                        "Your account is denis@sydq.net"});
+                        "Your account is denis@lemon-drop.net"});
 #line 13
  testRunner.Then("I should see the following information on the Welcome page", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        public virtual void RegisterFailed(string email, string firstName, string lastName, string gender, string password, string confirmPassword, string errorMessage, string[] exampleTags)
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Register successfully again")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US01 - User Registration")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Account")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
+        public virtual void RegisterSuccessfullyAgain()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register failed", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register successfully again", ((string[])(null)));
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -141,15 +147,50 @@ this.ScenarioSetup(scenarioInfo);
                         "Password",
                         "ConfirmPassword"});
             table3.AddRow(new string[] {
+                        "test01@lemon-drop.net",
+                        "Tester01",
+                        "LemonDrop",
+                        "Female",
+                        "p@55w0rd!",
+                        "p@55w0rd!"});
+#line 19
+ testRunner.When("I submit the following information on Register page", ((string)(null)), table3, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Value"});
+            table4.AddRow(new string[] {
+                        "Hello LemonDrop Tester01, welcome to join us!"});
+            table4.AddRow(new string[] {
+                        "Your account is test01@lemon-drop.net"});
+#line 22
+ testRunner.Then("I should see the following information on the Welcome page", ((string)(null)), table4, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        public virtual void RegisterFailed(string email, string firstName, string lastName, string gender, string password, string confirmPassword, string errorMessage, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register failed", exampleTags);
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "FirstName",
+                        "LastName",
+                        "Gender",
+                        "Password",
+                        "ConfirmPassword"});
+            table5.AddRow(new string[] {
                         string.Format("{0}", email),
                         string.Format("{0}", firstName),
                         string.Format("{0}", lastName),
                         string.Format("{0}", gender),
                         string.Format("{0}", password),
                         string.Format("{0}", confirmPassword)});
-#line 19
- testRunner.When("I submit the following information on Register page", ((string)(null)), table3, "When ");
-#line 22
+#line 28
+ testRunner.When("I submit the following information on Register page", ((string)(null)), table5, "When ");
+#line 31
  testRunner.Then(string.Format("I should see error messages \'{0}\' on the Register page", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -171,7 +212,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'Email is required\'")]
         public virtual void RegisterFailed_Variant0()
         {
-#line 18
+#line 27
 this.RegisterFailed("", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!", "\'Email is required\'", ((string[])(null)));
 #line hidden
         }
@@ -192,7 +233,7 @@ this.RegisterFailed("", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!", "\'Ema
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'Email is not valid\'")]
         public virtual void RegisterFailed_Variant1()
         {
-#line 18
+#line 27
 this.RegisterFailed("invalid@", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!", "\'Email is not valid\'", ((string[])(null)));
 #line hidden
         }
@@ -204,7 +245,7 @@ this.RegisterFailed("invalid@", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@qyq.net")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LastName", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Gender", "Male")]
@@ -213,8 +254,8 @@ this.RegisterFailed("invalid@", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd!"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'FirstName is required\',\'LastName is required\'")]
         public virtual void RegisterFailed_Variant2()
         {
-#line 18
-this.RegisterFailed("denis@qyq.net", "", "", "Male", "p@55w0rd!", "p@55w0rd!", "\'FirstName is required\',\'LastName is required\'", ((string[])(null)));
+#line 27
+this.RegisterFailed("denis@lemon-drop.net", "", "", "Male", "p@55w0rd!", "p@55w0rd!", "\'FirstName is required\',\'LastName is required\'", ((string[])(null)));
 #line hidden
         }
         
@@ -225,7 +266,7 @@ this.RegisterFailed("denis@qyq.net", "", "", "Male", "p@55w0rd!", "p@55w0rd!", "
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@qyq.net")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Denis")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LastName", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Gender", "Male")]
@@ -234,8 +275,8 @@ this.RegisterFailed("denis@qyq.net", "", "", "Male", "p@55w0rd!", "p@55w0rd!", "
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'LastName is required\'")]
         public virtual void RegisterFailed_Variant3()
         {
-#line 18
-this.RegisterFailed("denis@qyq.net", "Denis", "", "Male", "p@55w0rd!", "p@55w0rd!", "\'LastName is required\'", ((string[])(null)));
+#line 27
+this.RegisterFailed("denis@lemon-drop.net", "Denis", "", "Male", "p@55w0rd!", "p@55w0rd!", "\'LastName is required\'", ((string[])(null)));
 #line hidden
         }
         
@@ -246,7 +287,7 @@ this.RegisterFailed("denis@qyq.net", "Denis", "", "Male", "p@55w0rd!", "p@55w0rd
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 4")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@qyq.net")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Denis")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LastName", "Qiu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Gender", "Male")]
@@ -255,8 +296,8 @@ this.RegisterFailed("denis@qyq.net", "Denis", "", "Male", "p@55w0rd!", "p@55w0rd
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'Password must be longer than 5 characters\'")]
         public virtual void RegisterFailed_Variant4()
         {
-#line 18
-this.RegisterFailed("denis@qyq.net", "Denis", "Qiu", "Male", "p@55w", "p@55w", "\'Password must be longer than 5 characters\'", ((string[])(null)));
+#line 27
+this.RegisterFailed("denis@lemon-drop.net", "Denis", "Qiu", "Male", "p@55w", "p@55w", "\'Password must be longer than 5 characters\'", ((string[])(null)));
 #line hidden
         }
         
@@ -267,7 +308,7 @@ this.RegisterFailed("denis@qyq.net", "Denis", "Qiu", "Male", "p@55w", "p@55w", "
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automated")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 5")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@qyq.net")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Email", "denis@lemon-drop.net")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Denis")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LastName", "Qiu")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Gender", "Male")]
@@ -276,8 +317,8 @@ this.RegisterFailed("denis@qyq.net", "Denis", "Qiu", "Male", "p@55w", "p@55w", "
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "\'Password not match\'")]
         public virtual void RegisterFailed_Variant5()
         {
-#line 18
-this.RegisterFailed("denis@qyq.net", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd", "\'Password not match\'", ((string[])(null)));
+#line 27
+this.RegisterFailed("denis@lemon-drop.net", "Denis", "Qiu", "Male", "p@55w0rd!", "p@55w0rd", "\'Password not match\'", ((string[])(null)));
 #line hidden
         }
     }
