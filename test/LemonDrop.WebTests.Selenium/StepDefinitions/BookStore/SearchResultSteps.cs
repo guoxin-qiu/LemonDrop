@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace LemonDrop.WebTests.Selenium.StepDefinitions
+namespace LemonDrop.WebTests.Selenium.StepDefinitions.BookStore
 {
     public class SearchResultSteps : SeleniumStepsBase
     {
