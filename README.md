@@ -1,6 +1,5 @@
 # LemonDrop
-
-### Focus on automation tests
+Focus on automation tests
 
 ## References
 
