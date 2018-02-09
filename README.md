@@ -1,5 +1,5 @@
 # LemonDrop
-Focus on automation tests
+Focus on automation tests, use .NET Framework 4.6.1
 
 ## References
 
